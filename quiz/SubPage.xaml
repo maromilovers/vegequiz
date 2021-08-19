@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:quiz"
+             xmlns:resources="clr-namespace:quiz"
+             x:Class="quiz.SubPage"
+             NavigationPage.HasNavigationBar="false">
+    <StackLayout>
+        <Grid x:Name="grdHead" Margin="0" BackgroundColor="Pink"
+              HorizontalOptions="Center" VerticalOptions="Center" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.0*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.0*"/>
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Source="home.png" Grid.Row="1" Grid.Column="1" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="ImageButton_Clicked"/>
+            <!--<ImageButton Source="ret.png" Grid.Row="1" Grid.Column="2" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="ImageButton_Clicked"/>-->
+        </Grid>
+
+        <Grid x:Name="grdMain" Margin="0" BackgroundColor="White"
+              HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnString" Text="{x:Static resources:AppResource.SubButton1}" CornerRadius="10" Margin="5" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1c" FontSize="Title" BackgroundColor="#4CFC9C9C" Grid.Row="0" Grid.Column="1" Clicked="btnString_Clicked"/>
+            <Button x:Name="btnImage" Text="{x:Static resources:AppResource.SubButton2}" CornerRadius="10" Margin="5" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="#7F006CFA" Grid.Row="1" Grid.Column="1" Clicked="btnImage_Clicked"/>
+            <Button x:Name="btnCloze" Text="{x:Static resources:AppResource.SubButton3}" CornerRadius="10" Margin="5" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="#7FFAEB00" Grid.Row="2" Grid.Column="1" Clicked="btnCloze_Clicked"/>
+            <Button x:Name="btnTwoChoice" Text="{x:Static resources:AppResource.SubButton4}" CornerRadius="10" Margin="5" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="#7F00FA9A" Grid.Row="3" Grid.Column="1" Clicked="btnTwoChoice_Clicked"/>
+            <controls:AdMobBanner Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"  WidthRequest="320" HeightRequest="50" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:controls="clr-namespace:quiz"
+             xmlns:resources="clr-namespace:quiz"
+             x:Class="quiz.ListPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage x:Name="pageMain">
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <DataTemplate x:Key="arrowNext">
+                    <Image Source="next.png" WidthRequest="20" HeightRequest="50" Aspect="AspectFill"/>
+                </DataTemplate>
+                <DataTemplate x:Key="arrowPrev">
+                    <Image Source="prev.png" WidthRequest="20" HeightRequest="50" Aspect="AspectFill"/>
+                </DataTemplate>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+        <StackLayout>
+            <Grid x:Name="grdHead" Margin="0" BackgroundColor="Pink"
+              HorizontalOptions="Center" VerticalOptions="Center" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.0*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.0*"/>
+            </Grid.ColumnDefinitions>
+
+                <ImageButton Source="home.png" Grid.Row="1" Grid.Column="1" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="imgBack_Clicked"/>
+        </Grid>
+        
+        <AbsoluteLayout x:Name="layoutMain"
+                                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid x:Name="grdMain" Margin="10"  BackgroundColor="White"
+                WidthRequest="400" HeightRequest="600">
+                <!--WidthRequest="{Binding grdWidth}" HeightRequest="{Binding grdHeight}">-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+                
+                    <cv:CarouselViewControl x:Name="vControl" Position="0" AnimateTransition="True"  ShowArrows="True" ShowIndicators="true"
+                                       ArrowsBackgroundColor="Pink" ArrowsTintColor="Black" IndicatorsShape="Circle" IndicatorsTintColor="Pink"
+                                       ArrowsSize="15" NextArrowTemplate="{StaticResource arrowNext}" PrevArrowTemplate="{StaticResource arrowPrev}"
+                                       VerticalArrowsPosition="Center" HorizontalArrowsPosition="Center" Grid.Row="0" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="6">
+                    
+                        <cv:CarouselViewControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                <Grid x:Name="grdSub" Margin="10"  BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="lblTitle" Text="{Binding title}" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" HorizontalOptions="Center" FontSize="Title" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                                        <ImageButton x:Name="img1" Source="{Binding img1}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="1" Grid.Column="0" Clicked="img_Clicked"/>
+                                        <ImageButton x:Name="img2" Source="{Binding img2}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="1" Grid.Column="1" Clicked="img_Clicked"/>
+
+                                        <ImageButton x:Name="img3" Source="{Binding img3}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="2" Grid.Column="0" Clicked="img_Clicked"/>
+                                        <ImageButton x:Name="img4" Source="{Binding img4}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="2" Grid.Column="1" Clicked="img_Clicked"/>
+
+                                        <ImageButton x:Name="img5" Source="{Binding img5}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="3" Grid.Column="0" Clicked="img_Clicked"/>
+                                        <ImageButton x:Name="img6" Source="{Binding img6}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="3" Grid.Column="1" Clicked="img_Clicked"/>
+
+                                        <ImageButton x:Name="img7" Source="{Binding img7}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="4" Grid.Column="0" Clicked="img_Clicked"/>
+                                        <ImageButton x:Name="img8" Source="{Binding img8}" Aspect="AspectFit" BackgroundColor="White" BorderColor="Pink" BorderWidth="3" CornerRadius="5" Grid.Row="4" Grid.Column="1" Clicked="img_Clicked"/>
+                                </Grid>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselViewControl.ItemTemplate>
+                </cv:CarouselViewControl>
+
+                <!--<Button x:Name="btnBack" Text="タイトル" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" CornerRadius="10" BorderWidth="1" BorderColor="SkyBlue" BackgroundColor="White" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" Clicked="imgBack_Clicked"/>-->
+
+                <controls:AdMobBanner Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="6"  WidthRequest="320" HeightRequest="50" />
+
+            </Grid>
+            <Grid x:Name="grdDetail" IsVisible="false"  Margin="40,60,40,60">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="imgDetail" Source="haikei.png" BackgroundColor="Brown" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="4" Margin="0"
+                    HorizontalOptions="Center" IsVisible="true" VerticalOptions="Center" Aspect="Fill"/>
+
+                <ImageButton Source="close.png" Aspect="AspectFit"  BackgroundColor="#00000000" Grid.Row="0" Grid.Column="5" Clicked="imgReturn_Clicked"/>
+
+                <Image x:Name="imgDetailMain" Source="lbl1.png" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6"/>
+
+                <Label x:Name="lblDetailMain" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" />
+
+                <Button x:Name="ibHiragana" Margin="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" CornerRadius="10" BackgroundColor="SkyBlue" BorderColor="SkyBlue" BorderWidth="1"
+                         Text="{x:Static resources:AppResource.MainButton1}" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="true" Clicked="ibHiragana_Clicked"/>
+
+                <Button x:Name="ibKatakana" Margin="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" CornerRadius="10" BackgroundColor="White" BorderColor="SkyBlue" BorderWidth="1"
+                         Text="{x:Static resources:AppResource.MainButton2}" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="true" Clicked="ibKatakana_Clicked"/>
+
+                <Button x:Name="ibEnglish" Margin="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" CornerRadius="10" BackgroundColor="White" BorderColor="SkyBlue" BorderWidth="1"
+                         Text="{x:Static resources:AppResource.MainButton3}" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="true" Clicked="ibEnglish_Clicked"/>
+            </Grid>
+        </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>

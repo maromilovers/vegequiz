@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:quiz"
+             x:Class="quiz.QuestionPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="grdHead" Margin="0" BackgroundColor="Pink"
+              HorizontalOptions="Center" VerticalOptions="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.0*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.0*"/>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="home.png" Grid.Row="1" Grid.Column="1" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnBack_Clicked"/>
+                <ImageButton Source="ret.png" Grid.Row="1" Grid.Column="2" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnSelect_Clicked"/>
+            </Grid>
+            <AbsoluteLayout>
+                <Grid x:Name="grdMain" Margin="10"  BackgroundColor="White"
+                  HorizontalOptions="Center" VerticalOptions="Center"
+                  WidthRequest="400" HeightRequest="700"
+                  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="imgQBack" Source="haikei.png" Aspect="AspectFill" Grid.Row="0" Grid.RowSpan="5" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblQTitle" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" HorizontalTextAlignment="Center" Grid.Row="0" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Image x:Name="imgQMain" Source="mihon.png" Aspect="AspectFit" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Label x:Name="lblQDetail" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Subtitle" HorizontalTextAlignment="Center" Grid.Row="4" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                    <Button x:Name="btnAns1" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Large" TextColor="Black" BorderWidth="3" BorderColor="LightBlue" CornerRadius="10" BackgroundColor="White"
+                        Grid.Row="5" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="1" Clicked="btnAns_Clicked"/>
+                    <!--<Image x:Name="imgAns1" Source="white.png" Grid.Row="5" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="1"/>-->
+
+                    <Button x:Name="btnAns2" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Large" TextColor="Black" BorderWidth="3" BorderColor="LightBlue" CornerRadius="10" BackgroundColor="White" 
+                        Grid.Row="5" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1" Clicked="btnAns_Clicked"/>
+                    <!--<Image x:Name="imgAns2" Source="white.png" Grid.Row="5" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1"/>-->
+
+                    <Button x:Name="btnAns3" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Large" TextColor="Black" BorderWidth="3" BorderColor="LightBlue" CornerRadius="10" BackgroundColor="White"
+                        Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="1" Clicked="btnAns_Clicked"/>
+                    <!--<Image x:Name="imgAns3" Source="white.png" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="1"/>-->
+
+                    <Button x:Name="btnAns4" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Large" TextColor="Black" BorderWidth="3" BorderColor="LightBlue" CornerRadius="10" BackgroundColor="White" 
+                        Grid.Row="7" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1" Clicked="btnAns_Clicked"/>
+                    <!--<Image x:Name="imgAns4" Source="white.png" Grid.Row="7" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="1"/>-->
+
+                    <controls:AdMobBanner Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"  WidthRequest="320" HeightRequest="50" />
+
+                </Grid>
+                <Image x:Name="imgResult" Source="batu.png" WidthRequest="400" HeightRequest="700" IsVisible="false"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

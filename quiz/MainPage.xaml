@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:quiz"
+             xmlns:resources="clr-namespace:quiz"
+             x:Class="quiz.MainPage"
+             NavigationPage.HasNavigationBar="false">
+    <AbsoluteLayout>
+        <Grid x:Name="grdMain" Margin="5" BackgroundColor="White"
+              HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblTitle" Text="{x:Static resources:AppResource.Title}" FontAttributes="Bold" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1c" FontSize="Title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+            <!--<Image Source="main.png" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Aspect="AspectFit"/>-->
+            <ImageButton x:Name="btnImage1" Grid.Row="1" Grid.Column="1" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <ImageButton x:Name="btnImage2" Grid.Row="1" Grid.Column="2" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <ImageButton x:Name="btnImage3" Grid.Row="1" Grid.Column="3" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <ImageButton x:Name="btnImage4" Grid.Row="2" Grid.Column="1" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <ImageButton x:Name="btnImage5" Grid.Row="2" Grid.Column="2" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <ImageButton x:Name="btnImage6" Grid.Row="2" Grid.Column="3" Aspect="AspectFit" BackgroundColor="#00000000" Clicked="btnImage_Clicked"/>
+            <Button x:Name="btnHiragana" Text="{x:Static resources:AppResource.MainButton1}" CornerRadius="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1c" FontSize="Title" BackgroundColor="LightPink" Grid.Row="3" Grid.Column="1" Clicked="btnHiragana_Clicked"/>
+            <Button x:Name="btnKatakana" Text="{x:Static resources:AppResource.MainButton2}" CornerRadius="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="LightPink" Grid.Row="3" Grid.Column="2" Clicked="btnKatakana_Clicked"/>
+            <Button x:Name="btnEnglish" Text="{x:Static resources:AppResource.MainButton3}" CornerRadius="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="LightPink" Grid.Row="3" Grid.Column="3" Clicked="btnEnglish_Clicked"/>
+            <Button x:Name="btnList" Text="{x:Static resources:AppResource.MainButton4}" CornerRadius="10" FontFamily="MPLUSRounded1c-Regular.ttf#Rounded Mplus 1C" FontSize="Title" BackgroundColor="LightBlue" Grid.Row="4" Grid.Column="2" Clicked="btnList_Clicked"/>
+            <controls:AdMobBanner Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5"  WidthRequest="320" HeightRequest="50" />
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>
